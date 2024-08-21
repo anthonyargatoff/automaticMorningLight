@@ -15,8 +15,8 @@ l = tinytuya.BulbDevice(os.environ.get('DEVICE_ID'), os.environ.get('DEVICE_IP')
 data = l.status() 
 print('Device status: %r' % data)
 
-l.set_white_percentage(0,0)
 l.turn_on()
+l.set_white_percentage(0,0)
 while startBulbPercentage <= 100:
     print(startBulbPercentage)
     l.set_brightness_percentage(startBulbPercentage)
